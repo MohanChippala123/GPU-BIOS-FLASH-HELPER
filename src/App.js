@@ -3,113 +3,117 @@ import { FaMicrochip } from "react-icons/fa";
 
 function App() {
   return (
-    <div className="bg-gray-900 min-h-screen text-white font-sans overflow-x-hidden">
-      {/* Hero Section */}
-      <section className="relative h-screen flex flex-col justify-center items-center text-center overflow-hidden">
-        {/* Background Animated Circles */}
-        <div className="absolute top-0 left-0 w-full h-full -z-10">
-          <div className="absolute w-96 h-96 bg-primary rounded-full opacity-30 animate-ping top-[-10%] left-[-10%]"></div>
-          <div className="absolute w-72 h-72 bg-secondary rounded-full opacity-40 animate-pulse bottom-[-10%] right-[-10%]"></div>
-        </div>
-
-        {/* Hero Text */}
-        <h1 className="text-6xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent animate-bounce">
-          GPU BIOS Made Easy
+    <div className="bg-[#0b0f14] text-gray-200 min-h-screen font-sans">
+      
+      {/* NAVBAR */}
+      <nav className="flex justify-between items-center px-8 py-5 border-b border-gray-800">
+        <h1 className="text-lg font-semibold tracking-wide">
+          GPU BIOS Toolkit
         </h1>
-        <p className="text-gray-400 max-w-3xl text-lg md:text-xl mb-10">
-          Learn how to backup, flash, and recover GPUs safely. Step-by-step
-          guides for beginners and pros.
+        <div className="flex gap-6 text-sm text-gray-400">
+          <a href="#guides" className="hover:text-white">Guides</a>
+          <a href="#tools" className="hover:text-white">Tools</a>
+        </div>
+      </nav>
+
+      {/* HERO */}
+      <section className="max-w-5xl mx-auto px-6 py-24">
+        <h1 className="text-5xl font-bold leading-tight mb-6 text-white">
+          Fix and Flash GPU BIOS  
+          <br /> without breaking your card
+        </h1>
+
+        <p className="text-gray-400 text-lg max-w-2xl mb-8">
+          Simple guides and tools for repairing GPUs, flashing vBIOS, and recovering from bad flashes.
+          Built for people who actually work on hardware.
         </p>
-        <div className="flex gap-6">
+
+        <div className="flex gap-4">
           <a
-            className="px-8 py-4 bg-primary hover:bg-blue-700 rounded-lg font-semibold transition transform hover:scale-105 shadow-lg"
-            href="#tutorials"
+            href="#guides"
+            className="bg-white text-black px-6 py-3 rounded-md font-medium hover:opacity-80 transition"
           >
-            Get Started
+            View Guides
           </a>
+
           <a
-            className="px-8 py-4 border border-gray-500 hover:border-white rounded-lg font-semibold transition transform hover:scale-105"
-            href="#downloads"
+            href="#tools"
+            className="border border-gray-600 px-6 py-3 rounded-md hover:border-white transition"
           >
             Download Tools
           </a>
         </div>
-
-        {/* Animated GPU Cards */}
-        <div className="absolute top-1/4 left-1/4 w-48 h-32 bg-gray-800 rounded-2xl shadow-lg animate-float rotate-6 opacity-80 flex justify-center items-center">
-          <FaMicrochip className="text-primary text-6xl animate-bounce" />
-        </div>
-        <div className="absolute top-1/3 right-1/4 w-56 h-36 bg-gray-700 rounded-2xl shadow-2xl animate-float delay-2000 rotate-12 opacity-70 flex justify-center items-center">
-          <FaMicrochip className="text-secondary text-7xl animate-bounce" />
-        </div>
-        <div className="absolute bottom-1/4 left-1/3 w-44 h-28 bg-gray-600 rounded-2xl shadow-lg animate-float delay-4000 rotate-[-6deg] opacity-60 flex justify-center items-center">
-          <FaMicrochip className="text-primary text-5xl animate-bounce" />
-        </div>
       </section>
 
-      {/* Tutorials Section */}
-      <section id="tutorials" className="p-16">
-        <h2 className="text-4xl font-bold mb-12 text-center">
-          Interactive Tutorials
+      {/* FEATURE CARDS */}
+      <section id="guides" className="max-w-6xl mx-auto px-6 pb-24">
+        <h2 className="text-2xl font-semibold mb-10 text-white">
+          Popular Guides
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        <div className="grid md:grid-cols-3 gap-6">
           {[
             {
-              title: "Backup NVIDIA BIOS",
-              desc: "Step-by-step guide to backup your NVIDIA GPU BIOS safely.",
-              link: "#",
+              title: "Backup Your BIOS",
+              desc: "Save your original vBIOS before making any changes.",
             },
             {
-              title: "Flash AMD BIOS",
-              desc: "Learn how to flash your AMD GPU BIOS without risk.",
-              link: "#",
+              title: "Flash Safely",
+              desc: "Step-by-step process to flash AMD and NVIDIA cards.",
             },
             {
-              title: "Recover Failed Flash",
-              desc: "Recover your GPU if a BIOS flash fails.",
-              link: "#",
+              title: "Fix a Bricked GPU",
+              desc: "Recover from bad flashes using secondary GPUs.",
             },
           ].map((card, i) => (
             <div
               key={i}
-              className="bg-card p-8 rounded-2xl shadow-2xl transform transition-all duration-500 hover:-translate-y-4 hover:scale-105 cursor-pointer hover:bg-gray-800 flex flex-col items-center"
+              className="bg-[#11161c] border border-gray-800 rounded-lg p-6 hover:border-gray-600 transition"
             >
-              <FaMicrochip className="text-primary text-4xl mb-4" />
-              <h3 className="text-2xl font-bold mb-3">{card.title}</h3>
-              <p className="text-gray-400 mb-4">{card.desc}</p>
-              <a
-                className="text-primary font-semibold hover:underline"
-                href={card.link}
-              >
-                Read Guide
-              </a>
+              <FaMicrochip className="text-gray-400 mb-4 text-2xl" />
+              <h3 className="text-lg font-semibold mb-2 text-white">
+                {card.title}
+              </h3>
+              <p className="text-gray-400 text-sm">{card.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Downloads Section */}
-      <section id="downloads" className="p-16 bg-gray-800">
-        <h2 className="text-4xl font-bold mb-12 text-center">Download Tools</h2>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-10">
-          <a
-            href="#"
-            className="px-12 py-6 bg-primary rounded-2xl shadow-2xl text-xl font-semibold hover:scale-105 transform transition-all hover:bg-blue-700"
-          >
-            NVIDIA BIOS Tool
-          </a>
-          <a
-            href="#"
-            className="px-12 py-6 bg-secondary rounded-2xl shadow-2xl text-xl font-semibold hover:scale-105 transform transition-all hover:bg-red-500"
-          >
-            AMD BIOS Tool
-          </a>
+      {/* TOOLS SECTION */}
+      <section id="tools" className="bg-[#0e1319] border-t border-gray-800 py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-2xl font-semibold mb-8 text-white">
+            Tools
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-[#11161c] p-6 rounded-lg border border-gray-800">
+              <h3 className="text-lg font-semibold mb-2">NVIDIA Tools</h3>
+              <p className="text-gray-400 text-sm mb-4">
+                NVFlash, BIOS editors, and recovery tools.
+              </p>
+              <button className="text-sm text-white underline">
+                Download
+              </button>
+            </div>
+
+            <div className="bg-[#11161c] p-6 rounded-lg border border-gray-800">
+              <h3 className="text-lg font-semibold mb-2">AMD Tools</h3>
+              <p className="text-gray-400 text-sm mb-4">
+                ATIFlash, mod tools, and BIOS recovery utilities.
+              </p>
+              <button className="text-sm text-white underline">
+                Download
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 p-8 text-center text-gray-500 mt-16 border-t border-gray-700">
-        © 2026 GPU BIOS Hub | Use tools at your own risk | Mohan Chippala
+      {/* FOOTER */}
+      <footer className="text-center text-gray-500 text-sm py-8 border-t border-gray-800">
+        Built for learning and repair. Use at your own risk.
       </footer>
     </div>
   );
