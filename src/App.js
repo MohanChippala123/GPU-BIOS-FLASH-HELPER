@@ -113,7 +113,7 @@ function App() {
 
       {/* FOOTER */}
       <footer className="text-center text-gray-500 text-sm py-8 border-t border-gray-800">
-        Built for learning and repair. Use at your own risk.
+        Built for learning and repair. Use at your own risk. Website Developed By Mohan Chippala
       </footer>
     </div>
   );
