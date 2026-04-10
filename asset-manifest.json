@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/GPU-BIOS-FLASH-HELPER/static/css/main.a36018de.css",
-    "main.js": "/GPU-BIOS-FLASH-HELPER/static/js/main.68e8b44d.js",
+    "main.css": "/GPU-BIOS-FLASH-HELPER/static/css/main.87442421.css",
+    "main.js": "/GPU-BIOS-FLASH-HELPER/static/js/main.fb90d791.js",
     "index.html": "/GPU-BIOS-FLASH-HELPER/index.html",
-    "main.a36018de.css.map": "/GPU-BIOS-FLASH-HELPER/static/css/main.a36018de.css.map",
-    "main.68e8b44d.js.map": "/GPU-BIOS-FLASH-HELPER/static/js/main.68e8b44d.js.map"
+    "main.87442421.css.map": "/GPU-BIOS-FLASH-HELPER/static/css/main.87442421.css.map",
+    "main.fb90d791.js.map": "/GPU-BIOS-FLASH-HELPER/static/js/main.fb90d791.js.map"
   },
   "entrypoints": [
-    "static/css/main.a36018de.css",
-    "static/js/main.68e8b44d.js"
+    "static/css/main.87442421.css",
+    "static/js/main.fb90d791.js"
   ]
 }
